@@ -12,8 +12,13 @@
   top: 0px;
 
   border-bottom: 1px solid var(--border-color);
-  background-color: var(--bg-color);
-  opacity: 0.87;
+  background-color: rgba(
+    var(--bg-color-r),
+    var(--bg-color-g),
+    var(--bg-color-b),
+    0.6
+  );
+  backdrop-filter: blur(2px);
 
   z-index: 1;
 
@@ -89,7 +94,7 @@
 
   .projects {
     height: calc(100vh - var(--header-height));
-    padding: 10vh 0;
+    padding: 15vh 0;
 
     .title {
       font-size: 24px;
