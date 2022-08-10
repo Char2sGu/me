@@ -42,10 +42,7 @@
     flex-direction: column;
 
     .title {
-      flex-basis: 30%;
-
-      display: flex;
-      align-items: center;
+      margin-top: 8vh;
 
       font-family: 'Tiro Gurmukhi', serif;
       font-style: normal;
@@ -58,7 +55,8 @@
     }
 
     .detail {
-      flex-basis: 45%;
+      margin-top: 40px;
+      flex-grow: 1;
 
       font-family: 'Tiro Gurmukhi';
       font-style: normal;
@@ -71,7 +69,8 @@
     }
 
     .links {
-      flex-basis: 25%;
+      margin-top: 72px;
+      margin-bottom: 16vh;
 
       display: flex;
       gap: 24px;
