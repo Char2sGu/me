@@ -1,7 +1,8 @@
 /dist
+/.eslintcache
+
 /.angular/cache
 /node_modules
-
 
 .vscode/*
 !.vscode/settings.json
