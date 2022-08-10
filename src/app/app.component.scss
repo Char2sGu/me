@@ -1,0 +1,31 @@
+:host {
+  --header-height: 60px;
+
+  display: block;
+  padding-top: var(--header-height);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  top: 0px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .logo {
+    margin-left: 10%;
+
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+  }
+}
