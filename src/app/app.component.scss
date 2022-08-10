@@ -1,8 +1,5 @@
 :host {
   --header-height: 60px;
-
-  display: block;
-  padding-top: var(--header-height);
 }
 
 .header {
@@ -15,6 +12,10 @@
   top: 0px;
 
   border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  opacity: 0.87;
+
+  z-index: 1;
 
   .logo {
     margin-left: 10%;
@@ -35,6 +36,7 @@
 .content {
   width: 844px;
   margin: 0 auto;
+  margin-top: var(--header-height);
 
   .introduction {
     height: calc(100vh - var(--header-height));
@@ -78,6 +80,27 @@
 
         cursor: pointer;
       }
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .projects {
+    height: calc(100vh - var(--header-height));
+    padding: 10vh 0;
+
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--text-color-secondary);
     }
   }
 }
