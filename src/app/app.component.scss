@@ -19,15 +19,16 @@
   .logo {
     margin-left: 10%;
 
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
     font-family: 'Caveat', cursive;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
 
-    color: #000000;
+    color: var(--text-color-accent);
   }
 }
 
@@ -44,28 +45,18 @@
     .title {
       margin-top: 8vh;
 
-      font-family: 'Tiro Gurmukhi', serif;
-      font-style: normal;
-      font-weight: 400;
       font-size: 32px;
       line-height: 40px;
-      letter-spacing: 0.075em;
-
-      color: rgba(0, 0, 0, 0.87);
     }
 
     .detail {
       margin-top: 40px;
       flex-grow: 1;
 
-      font-family: 'Tiro Gurmukhi';
-      font-style: normal;
-      font-weight: 400;
       font-size: 16px;
       line-height: 20px;
-      letter-spacing: 0.075em;
 
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--text-color-secondary);
     }
 
     .links {

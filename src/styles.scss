@@ -3,3 +3,33 @@
   margin: initial;
   padding: initial;
 }
+
+body {
+  --text-color-r: 0;
+  --text-color-g: 0;
+  --text-color-b: 0;
+  --text-color-primary: rgba(
+    var(--text-color-r),
+    var(--text-color-g),
+    var(--text-color-b),
+    0.87
+  );
+  --text-color-secondary: rgba(
+    var(--text-color-r),
+    var(--text-color-g),
+    var(--text-color-b),
+    0.6
+  );
+  --text-color-accent: rgba(
+    var(--text-color-r),
+    var(--text-color-g),
+    var(--text-color-b),
+    1
+  );
+
+  font-family: 'Tiro Gurmukhi', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.075em;
+  color: var(--text-color--primary);
+}
