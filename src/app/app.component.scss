@@ -102,5 +102,51 @@
       line-height: 16px;
       color: var(--text-color-secondary);
     }
+
+    .cards {
+      margin-top: 24px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .card {
+        height: 112px;
+        padding: 24px 32px;
+
+        display: flex;
+        gap: 32px;
+
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+
+        background-color: #fafafa;
+
+        .icon {
+          width: 64px;
+          height: 64px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: rgb(255, 255, 255);
+          border: 1px solid var(--border-color);
+          border-radius: 10px;
+        }
+
+        .text {
+          width: 0;
+          flex-grow: 1;
+
+          .description {
+            margin-top: 4px;
+            font-size: 11px;
+            line-height: 14px;
+            color: var(--text-color-secondary);
+          }
+        }
+      }
+    }
   }
 }

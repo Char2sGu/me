@@ -4,6 +4,17 @@
   padding: initial;
 }
 
+a {
+  color: initial;
+  text-decoration: initial;
+  :hover {
+    color: initial;
+  }
+  :visited {
+    color: initial;
+  }
+}
+
 body {
   --text-color-r: 0;
   --text-color-g: 0;
