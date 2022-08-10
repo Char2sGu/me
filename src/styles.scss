@@ -26,6 +26,12 @@ body {
     var(--text-color-b),
     1
   );
+  --border-color: rgba(
+    var(--text-color-r),
+    var(--text-color-g),
+    var(--text-color-b),
+    0.1
+  );
 
   font-family: 'Tiro Gurmukhi', serif;
   font-style: normal;
