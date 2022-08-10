@@ -20,6 +20,7 @@
     margin-left: 10%;
 
     font-family: 'Caveat', cursive;
+    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     display: flex;
@@ -27,5 +28,66 @@
     text-align: center;
 
     color: #000000;
+  }
+}
+
+.content {
+  width: 844px;
+  margin: 0 auto;
+
+  .introduction {
+    height: calc(100vh - var(--header-height));
+
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      flex-basis: 30%;
+
+      display: flex;
+      align-items: center;
+
+      font-family: 'Tiro Gurmukhi', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0.075em;
+
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    .detail {
+      flex-basis: 45%;
+
+      font-family: 'Tiro Gurmukhi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.075em;
+
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .links {
+      flex-basis: 25%;
+
+      display: flex;
+      gap: 24px;
+
+      .icon {
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0.6;
+
+        cursor: pointer;
+      }
+    }
   }
 }
