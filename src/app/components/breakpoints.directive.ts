@@ -6,17 +6,17 @@ import { Directive, HostBinding } from '@angular/core';
   standalone: true,
 })
 export class BreakpointsDirective {
-  @HostBinding('class.xs') xs = false;
+  @HostBinding('class.sm') sm = false;
   @HostBinding('class.md') md = false;
   @HostBinding('class.lg') lg = false;
   @HostBinding('class.xl') xl = false;
   @HostBinding('class.xxl') xxl = false;
 
   readonly queries = {
-    xs: '(min-width: 576px)',
+    sm: '(min-width: 640px)',
     md: '(min-width: 768px)',
-    lg: '(min-width: 992px)',
-    xl: '(min-width: 1200px)',
+    lg: '(min-width: 1024px)',
+    xl: '(min-width: 1280px)',
     xxl: '(min-width: 1536px)',
   };
 
