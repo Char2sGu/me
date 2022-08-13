@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BreakpointsDirective } from './components/breakpoints.directive';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, LayoutModule, BreakpointsDirective],
+  imports: [BrowserModule, LayoutModule, HomeModule, BreakpointsDirective],
   providers: [],
   bootstrap: [AppComponent],
 })
