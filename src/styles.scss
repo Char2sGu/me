@@ -16,6 +16,8 @@ a {
 }
 
 body {
+  height: 100vh;
+
   --text-color-r: 0;
   --text-color-g: 0;
   --text-color-b: 0;
@@ -56,4 +58,8 @@ body {
   --bg-color: rgba(var(--bg-color-r), var(--bg-color-g), var(--bg-color-b), 1);
 
   background-color: var(--bg-color);
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 }
