@@ -1,29 +1,26 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { map, Observable, shareReplay, Subscription, tap } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class BreakpointClassNameUpdater {
-  readonly queries: BreakpointClassNameQueries;
   readonly breakpoints$: Observable<BreakpointClassNameMap>;
 
   private readonly elements = new Set<HTMLElement>();
   private subscription?: Subscription;
 
-  constructor(private observer: BreakpointObserver) {
-    this.queries = {
-      sm: '(min-width: 640px)',
-      md: '(min-width: 768px)',
-      lg: '(min-width: 1024px)',
-      xl: '(min-width: 1280px)',
-      xxl: '(min-width: 1536px)',
-      xxxl: '(min-width: 1920px)',
-    };
-    this.breakpoints$ = this.observer.observe(Object.values(this.queries)).pipe(
-      map((state) => this.parseState(state)),
-      tap((map) => this.elements.forEach((e) => this.updateElement(e, map))),
-      shareReplay(1),
-    );
+  constructor(
+    @Inject(BREAKPOINT_QUERY_CONFIG)
+    private queryConfig: BreakpointQueryConfig,
+    private observer: BreakpointObserver,
+  ) {
+    this.breakpoints$ = this.observer
+      .observe(Object.values(this.queryConfig))
+      .pipe(
+        map((state) => this.parseState(state)),
+        tap((map) => this.elements.forEach((e) => this.updateElement(e, map))),
+        shareReplay(1),
+      );
   }
 
   bootstrap(): void {
@@ -40,9 +37,9 @@ export class BreakpointClassNameUpdater {
 
   private parseState(state: BreakpointState): BreakpointClassNameMap {
     const map: Partial<Record<BreakpointClassName, boolean>> = {};
-    for (const k in this.queries) {
+    for (const k in this.queryConfig) {
       const className = k as BreakpointClassName;
-      const query = this.queries[className];
+      const query = this.queryConfig[className];
       map[className] = state.breakpoints[query];
     }
     return map as Required<typeof map>;
@@ -62,5 +59,8 @@ export class BreakpointClassNameUpdater {
 }
 
 export type BreakpointClassName = 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
-export type BreakpointClassNameQueries = Record<BreakpointClassName, string>;
+export type BreakpointQueryConfig = Record<BreakpointClassName, string>;
 export type BreakpointClassNameMap = Record<BreakpointClassName, boolean>;
+
+export const BREAKPOINT_QUERY_CONFIG =
+  new InjectionToken<BreakpointQueryConfig>('BreakpointQueryConfig');
