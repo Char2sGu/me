@@ -8,7 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint \"src/**/*.ts\" --cache --fix && prettier --write \"{src/**/*,*}.{html,css,less,scss,sass,js,json,md}\""
+    "lint": "eslint \"src/**/*.ts\" --cache --fix && prettier --write \"{src/**/*,*}.{html,css,less,scss,sass,js,json,md}\"",
+    "deploy": "ng deploy --base-href=/me/"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "@types/jasmine": "~4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
+    "angular-cli-ghpages": "^1.0.3",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
