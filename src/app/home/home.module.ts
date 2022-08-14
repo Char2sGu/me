@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
 import { HomeScreenIntroductionComponent } from './home-screen-introduction/home-screen-introduction.component';
+import { HomeScreenProjectsComponent } from './home-screen-projects/home-screen-projects.component';
+import { HomeProjectCardComponent } from './shared/home-project-card/home-project-card.component';
 import { HomeScreenLayoutComponent } from './shared/home-screen-layout/home-screen-layout.component';
 
 @NgModule({
@@ -12,6 +14,8 @@ import { HomeScreenLayoutComponent } from './shared/home-screen-layout/home-scre
     HomeHeaderComponent,
     HomeScreenLayoutComponent,
     HomeScreenIntroductionComponent,
+    HomeScreenProjectsComponent,
+    HomeProjectCardComponent,
   ],
   imports: [CommonModule],
   exports: [HomeComponent],

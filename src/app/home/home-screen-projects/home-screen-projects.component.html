@@ -1,0 +1,29 @@
+<app-home-screen-layout>
+  <div class="divider"></div>
+  <div class="content">
+    <div class="heading">
+      <div class="title">Featured Projects</div>
+      <div class="subtitle">
+        A collection of some projects that have shipped recently
+      </div>
+    </div>
+    <div class="cards">
+      <a href="https://github.com/deepkit-rest/rest" target="_blank">
+        <app-home-project-card
+          class="card"
+          icon="/assets/icons/projects/deepkit-rest.svg"
+          name="DeepKit REST"
+          description="A library for DeepKit which provides high-level abstraction for REST APIs to simplify the development process and allow developers to implement their own abstractions much easier."
+        ></app-home-project-card>
+      </a>
+      <a href="https://github.com/TheNightmareX/tasked" target="_blank">
+        <app-home-project-card
+          class="card"
+          icon="/assets/icons/projects/tasked.svg"
+          name="Tasked"
+          description="A well-organized Progressive Web Application built with Angular and NestJS as a task management solution for teams."
+        ></app-home-project-card>
+      </a>
+    </div>
+  </div>
+</app-home-screen-layout>

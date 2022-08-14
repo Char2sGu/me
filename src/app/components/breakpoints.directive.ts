@@ -11,6 +11,7 @@ export class BreakpointsDirective {
   @HostBinding('class.lg') lg = false;
   @HostBinding('class.xl') xl = false;
   @HostBinding('class.xxl') xxl = false;
+  @HostBinding('class.xxxl') xxxl = false;
 
   readonly queries = {
     sm: '(min-width: 640px)',
@@ -18,6 +19,7 @@ export class BreakpointsDirective {
     lg: '(min-width: 1024px)',
     xl: '(min-width: 1280px)',
     xxl: '(min-width: 1536px)',
+    xxxl: '(min-width: 1920px)',
   };
 
   constructor(private observer: BreakpointObserver) {
