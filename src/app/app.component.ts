@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 
-import { BreakpointClassNameUpdater } from './components/breakpoint-class-name-updater.service';
+import { BreakpointClassNameUpdater } from './core/breakpoint-class-name-updater.service';
 
 @Component({
   selector: 'app-root',
