@@ -5,22 +5,31 @@
 }
 
 a {
-  color: initial;
+  color: currentColor;
   text-decoration: initial;
-  :hover {
-    color: initial;
-  }
-  :visited {
-    color: initial;
-  }
 }
 
 body {
-  height: 100vh;
+  &.light {
+    --text-color-r: 0;
+    --text-color-g: 0;
+    --text-color-b: 0;
 
-  --text-color-r: 0;
-  --text-color-g: 0;
-  --text-color-b: 0;
+    --bg-color-r: 255;
+    --bg-color-g: 255;
+    --bg-color-b: 255;
+  }
+
+  &.dark {
+    --text-color-r: 255;
+    --text-color-g: 255;
+    --text-color-b: 255;
+
+    --bg-color-r: 17;
+    --bg-color-g: 17;
+    --bg-color-b: 17;
+  }
+
   --text-color-primary: rgba(
     var(--text-color-r),
     var(--text-color-g),
@@ -46,16 +55,17 @@ body {
     0.1
   );
 
+  --bg-color: rgba(var(--bg-color-r), var(--bg-color-g), var(--bg-color-b), 1);
+}
+
+body {
+  height: 100vh;
+
   font-family: 'Tiro Gurmukhi', serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.075em;
   color: var(--text-color-primary);
-
-  --bg-color-r: 255;
-  --bg-color-g: 255;
-  --bg-color-b: 255;
-  --bg-color: rgba(var(--bg-color-r), var(--bg-color-g), var(--bg-color-b), 1);
 
   background-color: var(--bg-color);
 
