@@ -25,14 +25,14 @@
       </div>
     </div>
     <div class="links">
-      <a class="icon" href="https://github.com/TheNightmareX" target="_blank">
-        <img src="assets/icons/social-medias/github.svg" alt="GitHub" />
-      </a>
-      <a class="icon" href="https://discord.gg/Nzfhx5tqje" target="_blank">
-        <img src="assets/icons/social-medias/discord.svg" alt="Discord" />
-      </a>
-      <a class="icon" href="https://twitter.com/Char2s" target="_blank">
-        <img src="assets/icons/social-medias/twitter.svg" alt="Twitter" />
+      <a
+        class="icon"
+        *ngFor="let item of links"
+        [title]="item.name"
+        [href]="item.href"
+        target="_blank"
+      >
+        <fa-icon size="1x" [icon]="item.icon"></fa-icon>
       </a>
     </div>
   </div>

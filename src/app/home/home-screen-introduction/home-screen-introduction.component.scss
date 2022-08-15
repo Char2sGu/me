@@ -60,9 +60,8 @@
   display: flex;
   gap: 24px;
 
-  .icon img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.6;
+  .icon {
+    font-size: 24px;
+    color: var(--text-color-secondary);
   }
 }

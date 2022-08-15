@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HomeComponent } from './home.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
@@ -17,7 +18,7 @@ import { HomeScreenLayoutComponent } from './shared/home-screen-layout/home-scre
     HomeScreenProjectsComponent,
     HomeProjectCardComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
