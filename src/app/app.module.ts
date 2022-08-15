@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { provideValue } from './common/injection';
+import { LOCAL_STORAGE } from './common/dom.tokens';
+import { provideValue } from './common/injection.utils';
 import { BREAKPOINT_QUERY_CONFIG } from './core/breakpoint-class-name-updater.service';
 import { HomeModule } from './home/home.module';
 
@@ -19,6 +20,7 @@ import { HomeModule } from './home/home.module';
       xxl: '(min-width: 1536px)',
       xxxl: '(min-width: 1920px)',
     }),
+    provideValue(LOCAL_STORAGE, localStorage),
   ],
   bootstrap: [AppComponent],
 })
