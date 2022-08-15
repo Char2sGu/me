@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LOCAL_STORAGE } from './common/dom.tokens';
 import { provideValue } from './common/injection.utils';
-import { BREAKPOINT_QUERY_CONFIG } from './core/breakpoint-class-name-updater.service';
+import { BREAKPOINT_QUERY_CONFIG } from './core/breakpoint-manager.service';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
