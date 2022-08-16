@@ -8,6 +8,7 @@ import { HomeScreenIntroductionComponent } from './home-screen-introduction/home
 import { HomeScreenProjectsComponent } from './home-screen-projects/home-screen-projects.component';
 import { HomeProjectCardComponent } from './shared/home-project-card/home-project-card.component';
 import { HomeScreenLayoutComponent } from './shared/home-screen-layout/home-screen-layout.component';
+import { HomeThemeButtonComponent } from './shared/home-theme-button/home-theme-button.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeScreenLayoutComponent } from './shared/home-screen-layout/home-scre
     HomeScreenIntroductionComponent,
     HomeScreenProjectsComponent,
     HomeProjectCardComponent,
+    HomeThemeButtonComponent,
   ],
   imports: [CommonModule, FontAwesomeModule],
   exports: [HomeComponent],

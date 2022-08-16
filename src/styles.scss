@@ -9,6 +9,14 @@ a {
   text-decoration: initial;
 }
 
+button {
+  color: currentColor;
+  background-color: initial;
+  border: initial;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 body {
   &.light {
     --text-color-r: 0;
@@ -72,4 +80,13 @@ body {
   &::-webkit-scrollbar {
     width: 0px;
   }
+}
+
+* {
+  transition: background-color 500ms ease;
+}
+
+// TODO: figure out the reason
+fa-icon > svg {
+  transform: translateY(3px);
 }

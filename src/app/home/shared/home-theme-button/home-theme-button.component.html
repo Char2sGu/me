@@ -1,0 +1,12 @@
+<button
+  *ngIf="theme$ | async as theme"
+  (click)="setTheme(theme === 'light' ? 'dark' : 'light')"
+  title="Switch to {{ theme === 'light' ? 'dark' : 'light' }} theme"
+  type="button"
+>
+  <fa-icon
+    class="icon"
+    [icon]="theme === 'light' ? icons.matDarkMode : icons.matLightMode"
+    size="1x"
+  ></fa-icon>
+</button>
