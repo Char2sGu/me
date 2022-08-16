@@ -1,4 +1,5 @@
 <button
+  class="button"
   *ngIf="theme$ | async as theme"
   (click)="setTheme(theme === 'light' ? 'dark' : 'light')"
   title="Switch to {{ theme === 'light' ? 'dark' : 'light' }} theme"
