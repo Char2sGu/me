@@ -2,10 +2,10 @@ pre-commit:
   parallel: true
   commands:
     lint:eslint:
-      glob: "*.ts"
-      run: npx eslint --cache --fix {staged_files}
+      glob: '*.ts'
+      run: npx eslint --cache --cache-file ./node_modules/.cache/.eslintcache --fix {staged_files}
       stage_fixed: true
     lint:prettier:
-      glob: "*.{html,css,less,scss,sass,ts,js,json,md}"
+      glob: '*.{html,css,less,scss,sass,ts,js,json,md}'
       run: npx prettier --write {staged_files}
       stage_fixed: true
