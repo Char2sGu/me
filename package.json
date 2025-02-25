@@ -2,12 +2,14 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+    "serve": "node dist/portfolio/server/server.mjs",
+    "lint:prettier": "prettier \"{*,src/**/*}.{html,css,less,scss,sass,ts,js,json,md}\" --write --cache --log-level warn",
+    "lint:eslint": "eslint src --cache --cache-file ./node_modules/.cache/.eslintcache --fix",
+    "lint": "npm run lint:prettier && npm run lint:eslint"
   },
   "private": true,
   "dependencies": {
@@ -30,15 +32,28 @@
     "@angular-devkit/build-angular": "^19.1.8",
     "@angular/cli": "^19.1.8",
     "@angular/compiler-cli": "^19.1.0",
+    "@eslint/js": "^8.57.0",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import-x": "^4.4.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.7.2"
+    "lefthook": "^1.11.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-classnames": "^0.7.1",
+    "prettier-plugin-merge": "^0.7.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.13.0"
   }
 }

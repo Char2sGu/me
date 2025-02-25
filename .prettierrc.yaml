@@ -1,0 +1,8 @@
+singleQuote: true
+trailingComma: all
+quoteProps: consistent
+plugins:
+  - prettier-plugin-tailwindcss
+  - prettier-plugin-classnames
+  - prettier-plugin-merge
+endingPosition: absolute-with-indent
